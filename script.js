@@ -1,4 +1,9 @@
 const shadesOfCyan = ['#00bcd4', '#00acc1', '#0097a7'];
+const hints = [
+    'Hint: This shade is often associated with a bright and vibrant cyan.',
+    'Hint: This shade is slightly darker than the first one.',
+    'Hint: This shade is the darkest among the three options.'
+];
 let correctAnswerIndex;
 
 document.getElementById('main').onclick = function() {
@@ -15,6 +20,7 @@ function loadQuiz() {
     options.forEach((option, index) => {
         option.textContent = shadesOfCyan[index];
     });
+    document.getElementById('hint').textContent = hints[correctAnswerIndex];
 }
 
 function checkAnswer(selectedIndex) {
